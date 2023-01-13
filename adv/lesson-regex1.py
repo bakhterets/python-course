@@ -3,7 +3,7 @@
 #   Program by Ilia B.                      #
 #                                           #
 #   Version Date    Info                    #
-#       1.0 2022    Python course           #
+#       1.1 2023    Python course           #
 #                                           #
 #-------------------------------------------#
 
@@ -45,3 +45,18 @@ textlookfor = r"\w+\.\w+"
 allresults = re.findall(textlookfor, mytext)
 
 print(allresults)
+
+
+link = "https://www.amalgama-lab.com/songs/b/bring_me_the_horizon/ludens.html"
+#pattern = '(?:^.*\/)([^\/]+)(?:\.html)'
+
+result = re.search(r"(?:^.*\/)([^\/]+)(?:\.html)", link)
+
+print(result.group(1))
+
+
+#if result:
+#    print("ok")
+#    print(result)
+#else:
+#    print("ne ok")
